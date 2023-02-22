@@ -1,0 +1,136 @@
+/* variable */
+
+:root {
+  --violet: rgba(138, 43, 226, 1);
+  --dark-violet: indigo;
+}
+
+/* Global */
+section {
+  padding: 50px 0 100px;
+}
+
+/* Custom CSS Style */
+
+.bg-violet {
+  background: var(--violet) !important;
+}
+
+.bg-darkviolet {
+  background: var(--dark-violet) !important;
+}
+
+.text-darkviolet {
+  color: var(--dark-violet) !important;
+}
+
+.border-violet {
+  border: 2px solid var(--violet);
+}
+
+a.bg-violet:hover {
+  background-color: var(--dark-violet);
+}
+
+a.border-violet:hover {
+  border: 2px solid var(--dark-violet) !important;
+}
+
+/* Navbar */
+.navbar-nav a {
+  text-decoration: none;
+  color: rgba(138, 43, 226, 0.8) !important;
+  border-bottom: 2px solid rgba(138, 43, 226, 0.3) !important;
+}
+
+/* Hero Section */
+#hero-section {
+  background: url("assets/img/1.jpg") no-repeat;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  padding: 0;
+}
+
+#hero-section::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(75, 0, 130, 0.6);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#hero-section .row {
+  position: absolute;
+  z-index: 1;
+}
+
+/* Value Products */
+
+#value-product .row {
+  row-gap: 3rem;
+}
+
+/* Awards */
+#awards img {
+  height: 150px;
+}
+
+/* Buy */
+#buy .links {
+  column-gap: 2rem;
+}
+
+/* footer info */
+#footer-info {
+  background: rgba(138, 43, 226, 0.075);
+}
+#footer-info .sosmed-icon {
+  height: 40px;
+  width: 40px;
+}
+
+#footer-info a {
+  color: rgba(138, 43, 226, 0.8) !important;
+}
+
+#backtotop {
+  z-index: 9999;
+  bottom: 150px;
+  right: 30px;
+}
+
+#messanger {
+  bottom: 100px;
+  right: 30px;
+  z-index: 9999;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #hero-section .row {
+    margin-top: 130px;
+  }
+
+  #buy .links {
+    row-gap: 1rem;
+  }
+}
+
+/* dekstop */
+@media (min-width: 992px) {
+  /* Values products */
+  #value-product img {
+    height: auto;
+    width: 100%;
+  }
+
+  #value-product .detail {
+    width: 100%;
+  }
+}
